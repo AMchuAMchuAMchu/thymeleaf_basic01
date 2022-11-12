@@ -18,21 +18,15 @@ public class BasicSyntax {
 
     @Test
     public void testSuffixPrefix(){
-
         TemplateEngine te = new TemplateEngine();
-
         ClassLoaderTemplateResolver ctr = new ClassLoaderTemplateResolver();
-
         ctr.setPrefix("template/");
         ctr.setSuffix(".html");
         te.setTemplateResolver(ctr);
-
         Context context = new Context();
         context.setVariable("name","桐谷和人kirito");
         String demo = te.process("demo", context);
         System.out.println("demo==>"+demo);
-
-
     }
 
     @Test

@@ -1,5 +1,6 @@
 package org.kirito.controller;
 
+import org.junit.Test;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
@@ -13,7 +14,20 @@ import org.thymeleaf.context.Context;
  */
 public class Demo01 {
 
-    public static void main(String[] args) {
+
+    @Test
+    public void testInsertSyntax(){
+
+        Context context = new Context();
+        context.setVariable("name","樱满集");
+        String process = new TemplateEngine().process("<h1>${name}</h1>",context);
+        System.out.println("process==>"+process);
+
+
+    }
+
+    @Test
+    public void testInit() {
 
         String process = new TemplateEngine().process("<input type='text' th:value='罪恶王冠'/>", new Context());
 

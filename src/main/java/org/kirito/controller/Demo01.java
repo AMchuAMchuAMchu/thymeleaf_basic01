@@ -20,7 +20,7 @@ public class Demo01 {
 
         Context context = new Context();
         context.setVariable("name","樱满集");
-        String process = new TemplateEngine().process("<h1>${name}</h1>",context);
+        String process = new TemplateEngine().process("<input type='text' th:value='${name}' />",context);
         System.out.println("process==>"+process);
 
 

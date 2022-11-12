@@ -1,5 +1,6 @@
 package org.kirito.web;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @RequestMapping("/anime")
-@RestController
+@Controller
 public class BasicSyntax {
 
     @GetMapping("/insert")

@@ -30,7 +30,7 @@ public class BasicSyntax {
 
         te.setTemplateResolver(ctr);
 
-        String process = te.process("classpath:demo.html", context);
+        String process = te.process("demo.html", context);
 
         System.out.println("process==>"+process);
 

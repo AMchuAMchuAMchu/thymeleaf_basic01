@@ -27,6 +27,7 @@ public class BasicSyntax {
 
     @GetMapping("/link01")
     public String link01(Model model){
+        model.addAttribute("character01","Alice");
         return "link01";
     }
 

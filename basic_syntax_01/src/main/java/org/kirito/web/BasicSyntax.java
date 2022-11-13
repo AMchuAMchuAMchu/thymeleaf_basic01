@@ -24,6 +24,14 @@ import javax.servlet.http.HttpServletRequest;
 public class BasicSyntax {
 
 
+
+    @GetMapping("/link01")
+    public String link01(Model model){
+        return "link01";
+    }
+
+
+
     @GetMapping("/object01")
     public String object01(Model model){
         Manga manga = new Manga();

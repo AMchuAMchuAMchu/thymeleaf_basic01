@@ -25,6 +25,14 @@ public class BasicSyntax {
 
 
 
+    @GetMapping("/nullDemo")
+    public String nullDemo(Model model){
+        model.addAttribute("name01","");
+        model.addAttribute("name02",null);
+        return "nullDemo";
+    }
+
+
     @GetMapping("/bool")
     public String bool(Model model){
         model.addAttribute("age",17);

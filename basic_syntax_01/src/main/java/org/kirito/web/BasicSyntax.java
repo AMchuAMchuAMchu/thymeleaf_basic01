@@ -19,9 +19,15 @@ import javax.servlet.http.HttpServletRequest;
  * CreateTime ==> 2022-11-12 16:12:06
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
-@RequestMapping("/anime")
+@RequestMapping("/")
 @Controller
 public class BasicSyntax {
+
+
+    @GetMapping("/i18N")
+    public String login(Model model){
+        return "login";
+    }
 
 
 

@@ -24,6 +24,15 @@ import javax.servlet.http.HttpServletRequest;
 public class BasicSyntax {
 
 
+
+    @GetMapping("/bool")
+    public String bool(Model model){
+        model.addAttribute("age",17);
+        model.addAttribute("married",true);
+        return "bool";
+    }
+
+
     @GetMapping("/i18N")
     public String login(Model model){
         return "login";

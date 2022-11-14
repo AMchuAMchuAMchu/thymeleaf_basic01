@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>🎃🎃</title>
+</head>
+<body>
+<h1 th:if="${age} &gt; 18">年龄大于18</h1>
+<h1 th:if="${age} &lt; 18">年龄少于18</h1>
+<h1 th:if="${married}">已婚了</h1>
+<h1 th:if="${married} and ${age} &gt; 18">已婚且大于18岁</h1>
+</body>
+</html>

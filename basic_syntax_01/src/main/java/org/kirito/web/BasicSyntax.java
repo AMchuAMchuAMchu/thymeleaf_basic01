@@ -30,6 +30,13 @@ public class BasicSyntax {
     }
 
 
+    @GetMapping
+    public String index(Model model){
+        model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
+        return "index";
+    }
+
+
 
     @GetMapping("/link01")
     public String link01(Model model){

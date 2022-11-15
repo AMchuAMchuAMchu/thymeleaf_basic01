@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Map;
+import java.util.MissingResourceException;
 
 /**
  * Description ==> TODO
@@ -32,13 +33,13 @@ public class BasicSyntax {
 
 
     @PostMapping("/index")
-    public String index(Model model) {
+    public String index(Model model,HttpServletRequest request) {
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        System.out.println("username:"+model.getAttribute("username"));
-        System.out.println("password:"+model.getAttribute("password"));
+        System.out.println("username:"+request.getParameter("username"));
+        System.out.println("password:"+request.getParameter("password"));
         return "index";
 
 

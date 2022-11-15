@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>🍹🍹🍹</title>
+</head>
+<body>
+<form th:attr="action=${valueAction},method=${valueMethod}">
+    用户名:<input th:attr="type=${valueTypeU},value=${valueUsername}"><br>
+    密 码:<input th:attr="type=${valueTypeP},value=${valuePassword}"><br>
+    <button th:attr="type=${valueTypeS},value=${valueSubmit}"></button>
+</form>
+</body>
+</html>

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
+import java.beans.MethodDescriptor;
 
 /**
  * Description ==> TODO
@@ -24,6 +25,23 @@ import javax.servlet.http.HttpServletRequest;
 public class BasicSyntax {
 
 
+
+
+
+    @GetMapping("attr")
+    public String attr(Model model){
+        model.addAttribute("username","绫小路清隆");
+        model.addAttribute("password","131313");
+        model.addAttribute("valueSubmit","轻井泽惠-提交");
+        model.addAttribute("valueAction","/index");
+        model.addAttribute("valueMethod","post");
+        model.addAttribute("valueTypeU","text");
+        model.addAttribute("valueTypeP","password");
+        model.addAttribute("valueTypeS","submit");
+        model.addAttribute("valueUsername","请客观输入用户名的说...");
+        model.addAttribute("valuePassword","请客观输入密码的说...");
+        return "attr";
+    }
 
 
     @GetMapping("/sanmu")
@@ -58,8 +76,12 @@ public class BasicSyntax {
 
 
     @GetMapping
-    public String index(Model model){
+    public String index(Model model,HttpServletRequest request){
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
+        System.out.println("=====");
+        System.out.println("=====");
+        System.out.println("=====");
+        System.out.println(request.getParameterMap());
         return "index";
     }
 

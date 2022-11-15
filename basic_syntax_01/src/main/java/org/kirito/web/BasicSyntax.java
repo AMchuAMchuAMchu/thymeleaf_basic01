@@ -41,8 +41,6 @@ public class BasicSyntax {
         System.out.println("username:"+request.getParameter("username"));
         System.out.println("password:"+request.getParameter("password"));
         return "index";
-
-
     }
 
     @GetMapping("/attr")

@@ -6,8 +6,8 @@
 </head>
 <body>
 <form th:attr="action=${valueAction},method=${valueMethod}">
-    用户名:<input th:attr="type=${valueTypeU},placeHolder=${valueUsername},name=${usernameN}"><br>
-    密 码:<input th:attr="type=${valueTypeP},placeHolder=${valuePassword},name=${passwordN}"><br>
+    用户名:<input checked="" th:attr="type=${valueTypeU},placeHolder=${valueUsername},name=${usernameN}"><br>
+    密 码:<input checked="" th:attr="type=${valueTypeP},placeHolder=${valuePassword},name=${passwordN}"><br>
     <button th:attr="type=${valueTypeS},value=${valueSubmit}"></button>
     <button type="submit" value="黑卡蒂"></button>
 </form>

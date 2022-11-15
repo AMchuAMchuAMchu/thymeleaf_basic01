@@ -33,7 +33,8 @@ public class BasicSyntax {
 
     @GetMapping("/booleanH")
     public String booleanH(Model model){
-        model.addAttribute("c1","酷拉皮卡");
+        model.addAttribute("c1",true);
+        model.addAttribute("c2",false);
         return "booleanH";
     }
 

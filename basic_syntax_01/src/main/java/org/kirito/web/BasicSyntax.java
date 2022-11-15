@@ -33,7 +33,7 @@ public class BasicSyntax {
         model.addAttribute("username","绫小路清隆");
         model.addAttribute("password","131313");
         model.addAttribute("valueSubmit","轻井泽惠-提交");
-        model.addAttribute("valueAction","/index.html");
+        model.addAttribute("valueAction","/index");
         model.addAttribute("valueMethod","post");
         model.addAttribute("valueTypeU","text");
         model.addAttribute("valueTypeP","password");
@@ -75,13 +75,13 @@ public class BasicSyntax {
     }
 
 
-    @GetMapping
+    @GetMapping("/index")
     public String index(Model model,HttpServletRequest request){
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-//        System.out.println(request.getParameterMap());
+        System.out.println(request.getParameterMap());
         return "index";
     }
 

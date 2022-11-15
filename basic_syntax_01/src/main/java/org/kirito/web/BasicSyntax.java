@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -88,12 +89,11 @@ public class BasicSyntax {
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        BufferedReader reader = request.getReader();
-        byte[] bytes = reader.readLine().getBytes();
-        String s = new String(bytes, StandardCharsets.UTF_8);
+        ServletInputStream is = request.getInputStream();
+        int read = is.read();
         System.out.println("=====");
         System.out.println("=====");
-        System.out.println(s);
+        System.out.println(read);
         return "index";
 
 

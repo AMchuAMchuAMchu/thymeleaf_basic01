@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.beans.MethodDescriptor;
@@ -82,7 +83,7 @@ public class BasicSyntax {
 
 
     @PostMapping("/index")
-    public String index(Model model,HttpServletRequest request) throws IOException {
+    public String index(Model model, ServletRequest request) throws IOException {
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");

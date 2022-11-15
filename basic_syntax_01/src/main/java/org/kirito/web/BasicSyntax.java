@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.beans.MethodDescriptor;
+import java.util.Arrays;
+import java.util.Map;
 
 /**
  * Description ==> TODO
@@ -82,7 +84,10 @@ public class BasicSyntax {
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        System.out.println(request.getParameterMap());
+        Map<String, String[]> parameterMap = request.getParameterMap();
+        parameterMap.forEach((k,v)->{
+            System.out.println(k+":"+ Arrays.toString(v));
+        });
         return "index";
     }
 

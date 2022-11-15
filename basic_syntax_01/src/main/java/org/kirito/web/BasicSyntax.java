@@ -4,10 +4,7 @@ import org.kirito.entity.Manga;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequest;
@@ -84,7 +81,7 @@ public class BasicSyntax {
 
 
     @PostMapping("/index")
-    public String index(Model model,String username,String password) throws IOException {
+    public String index(Model model, @RequestParam("username") String username,@RequestParam("password") String password) throws IOException {
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");

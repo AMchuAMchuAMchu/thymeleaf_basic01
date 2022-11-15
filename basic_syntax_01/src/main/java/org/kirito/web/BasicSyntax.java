@@ -31,6 +31,11 @@ import java.util.MissingResourceException;
 public class BasicSyntax {
 
 
+    @GetMapping("/booleanH")
+    public String booleanH(Model model){
+        model.addAttribute("c1","酷拉皮卡");
+        return "booleanH";
+    }
 
     @PostMapping("/index")
     public String index(Model model,HttpServletRequest request) {
@@ -90,11 +95,6 @@ public class BasicSyntax {
     public String login(Model model){
         return "login";
     }
-
-
-
-
-
 
     @GetMapping("/link01")
     public String link01(Model model){

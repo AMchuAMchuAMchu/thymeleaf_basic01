@@ -84,16 +84,13 @@ public class BasicSyntax {
 
 
     @PostMapping("/index")
-    public String index(Model model, ServletRequest request) throws IOException {
+    public String index(Model model,String username,String password) throws IOException {
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        ServletInputStream is = request.getInputStream();
-        int read = is.read();
-        System.out.println("=====");
-        System.out.println("=====");
-        System.out.println(read);
+        System.out.println("username:"+username);
+        System.out.println("password:"+password);
         return "index";
 
 

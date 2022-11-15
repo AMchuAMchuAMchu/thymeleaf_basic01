@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import java.beans.MethodDescriptor;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -79,15 +82,20 @@ public class BasicSyntax {
 
 
     @PostMapping("/index")
-    public String index(Model model,HttpServletRequest request){
+    public String index(Model model,HttpServletRequest request) throws IOException {
         model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        String username = request.getParameter("username");
-        System.out.println(username);
-        System.out.println(username);
+        BufferedReader reader = request.getReader();
+        byte[] bytes = reader.readLine().getBytes();
+        String s = new String(bytes, StandardCharsets.UTF_8);
+        System.out.println("=====");
+        System.out.println("=====");
+        System.out.println(s);
         return "index";
+
+
     }
 
 

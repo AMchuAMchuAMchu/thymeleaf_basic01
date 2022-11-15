@@ -33,7 +33,7 @@ public class BasicSyntax {
         model.addAttribute("username","绫小路清隆");
         model.addAttribute("password","131313");
         model.addAttribute("valueSubmit","轻井泽惠-提交");
-        model.addAttribute("valueAction","/index");
+        model.addAttribute("valueAction","/index.html");
         model.addAttribute("valueMethod","post");
         model.addAttribute("valueTypeU","text");
         model.addAttribute("valueTypeP","password");

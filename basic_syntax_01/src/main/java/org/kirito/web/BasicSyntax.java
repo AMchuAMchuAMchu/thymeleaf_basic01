@@ -38,8 +38,8 @@ public class BasicSyntax {
         model.addAttribute("valueTypeU","text");
         model.addAttribute("valueTypeP","password");
         model.addAttribute("valueTypeS","submit");
-        model.addAttribute("valueUsername","请客观输入用户名的说...");
-        model.addAttribute("valuePassword","请客观输入密码的说...");
+        model.addAttribute("valueUsername","请客官输入用户名的说...");
+        model.addAttribute("valuePassword","请客官输入密码的说...");
         return "attr";
     }
 

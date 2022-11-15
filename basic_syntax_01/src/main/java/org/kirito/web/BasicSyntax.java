@@ -81,7 +81,7 @@ public class BasicSyntax {
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        System.out.println(request.getParameterMap());
+//        System.out.println(request.getParameterMap());
         return "index";
     }
 

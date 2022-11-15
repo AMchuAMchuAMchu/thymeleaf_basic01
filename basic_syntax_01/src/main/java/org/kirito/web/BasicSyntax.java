@@ -28,7 +28,7 @@ public class BasicSyntax {
 
 
 
-    @GetMapping("attr")
+    @GetMapping("/attr")
     public String attr(Model model){
         model.addAttribute("username","绫小路清隆");
         model.addAttribute("password","131313");

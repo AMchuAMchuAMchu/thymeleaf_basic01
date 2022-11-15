@@ -25,6 +25,16 @@ public class BasicSyntax {
 
 
 
+
+    @GetMapping("/sanmu")
+    public String sanmu(Model model){
+        model.addAttribute("age",17);
+        model.addAttribute("time",2022);
+        return "sanmu";
+    }
+
+
+
     @GetMapping("/nullDemo")
     public String nullDemo(Model model){
         model.addAttribute("name01","");

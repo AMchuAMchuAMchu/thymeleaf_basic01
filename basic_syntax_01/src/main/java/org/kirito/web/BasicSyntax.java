@@ -31,12 +31,25 @@ public class BasicSyntax {
 
 
 
+    @PostMapping("/index")
+    public String index(Model model) {
+        model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
+        System.out.println("=====");
+        System.out.println("=====");
+        System.out.println("=====");
+        System.out.println("username:"+model.getAttribute("username"));
+        System.out.println("password:"+model.getAttribute("password"));
+        return "index";
 
+
+    }
 
     @GetMapping("/attr")
     public String attr(Model model){
         model.addAttribute("username","绫小路清隆");
         model.addAttribute("password","131313");
+        model.addAttribute("usernameN","username");
+        model.addAttribute("passwordN","password");
         model.addAttribute("valueSubmit","轻井泽惠-提交");
         model.addAttribute("valueAction","/index");
         model.addAttribute("valueMethod","post");
@@ -80,18 +93,7 @@ public class BasicSyntax {
     }
 
 
-    @PostMapping("/index")
-    public String index(Model model, @RequestParam("username") String username,@RequestParam("password") String password) throws IOException {
-        model.addAttribute("welcome","Welcome to sword art online!!||欢迎来到刀剑的世界!!");
-        System.out.println("=====");
-        System.out.println("=====");
-        System.out.println("=====");
-        System.out.println("username:"+username);
-        System.out.println("password:"+password);
-        return "index";
 
-
-    }
 
 
 

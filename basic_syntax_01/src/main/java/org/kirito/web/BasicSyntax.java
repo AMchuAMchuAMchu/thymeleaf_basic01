@@ -84,10 +84,9 @@ public class BasicSyntax {
         System.out.println("=====");
         System.out.println("=====");
         System.out.println("=====");
-        Map<String, String[]> parameterMap = request.getParameterMap();
-        parameterMap.forEach((k,v)->{
-            System.out.println(k+":"+ Arrays.toString(v));
-        });
+        String username = request.getParameter("username");
+        System.out.println(username);
+        System.out.println(username);
         return "index";
     }
 

@@ -9,16 +9,13 @@
 <table border="3">
     <tr>
         <th>Anime官方名</th>
-    </tr>
-    <tr th:each="name:${names}">
-        <td th:text="${name}"></td>
-    </tr>
-    <tr>
         <th>Anime首播时间</th>
     </tr>
-    <tr th:each="time:${times}">
-        <td th:text="${time}"></td>
+    <tr th:each="anime:${animes}">
+        <td th:text="${anime.name}"></td>
+        <td th:text="${anime.time}"></td>
     </tr>
+
 </table>
 
 </body>

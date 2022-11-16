@@ -1,5 +1,6 @@
 package org.kirito.web;
 
+import org.kirito.entity.Anime;
 import org.kirito.entity.Manga;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import java.beans.MethodDescriptor;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.MissingResourceException;
@@ -34,10 +36,12 @@ public class BasicSyntax {
 
     @GetMapping("/each")
     public String each(Model model){
-        String [] names = new String[]{"末日三问","四月是你的谎言","可塑性记忆","我们仍未知道那天所看见的花的名字"};
-        model.addAttribute("names",names);
-        Integer [] times = new Integer[]{2017,2014,2015,2011};
-        model.addAttribute("times",times);
+        ArrayList<Anime> list = new ArrayList<>();
+        list.add(new Anime("那朵花/未闻花名",2011));
+        list.add(new Anime("四月是你的谎言",2014));
+        list.add(new Anime("可塑性记忆",2015));
+        list.add(new Anime("末日三问",2017));
+        model.addAttribute("animes",list);
         return "each";
     }
 

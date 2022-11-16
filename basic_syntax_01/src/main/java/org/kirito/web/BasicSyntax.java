@@ -30,6 +30,17 @@ import java.util.*;
 public class BasicSyntax {
 
 
+    @GetMapping("/eachSelect")
+    public String eachSelect(Model model){
+        ArrayList<String> cityList = new ArrayList<>();
+        cityList.add("北京");
+        cityList.add("东京");
+        cityList.add("南京");
+        cityList.add("西安");
+        model.addAttribute("cityList",cityList);
+        return "eachSelect";
+    }
+
     @GetMapping("/eachMap")
     public String eachMap(Model model){
         HashMap<Integer, String> animesHash = new HashMap<>();

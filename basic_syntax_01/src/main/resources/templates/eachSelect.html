@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>🎃🎃🎃</title>
+</head>
+<body>
+<select th:each="city:${cityList}">
+    <option>嗯,可以开始选择你喜欢的城市了..^_^</option>
+    <option th:text="${city}"></option>
+</select>
+</body>
+</html>

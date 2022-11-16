@@ -15,10 +15,7 @@ import java.beans.MethodDescriptor;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.MissingResourceException;
+import java.util.*;
 
 /**
  * Description ==> TODO
@@ -33,6 +30,16 @@ import java.util.MissingResourceException;
 public class BasicSyntax {
 
 
+    @GetMapping("/eachMap")
+    public String eachMap(Model model){
+        HashMap<Integer, String> animesHash = new HashMap<>();
+        animesHash.put(1001,"足立慎吾");
+        animesHash.put(1002,"小野学");
+        animesHash.put(1003,"伊藤智彦");
+        animesHash.put(1004,"荒木哲郎");
+        model.addAttribute("animesHash",animesHash);
+        return "eachMap";
+    }
 
     @GetMapping("/each")
     public String each(Model model){

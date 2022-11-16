@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>🍑🍑🍑🍑🍑</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>身份证ID</th>
+        <th>大名</th>
+    </tr>
+    <tr th:each="anime:${animesHash}">
+        <td th:text="${anime.getKey()}"></td>
+        <td th:text="${anime.getValue()}"></td>
+    </tr>
+</table>
+</body>
+</html>

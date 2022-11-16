@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>🥙🥙🥙</title>
+</head>
+<body>
+<table th:each="name,listStatus:${list}">
+    <tr>
+        <th>爱酱名字O(∩_∩)O~</th>
+    </tr>
+    <tr>
+        count:
+        <td th:text="${listStatus.count}"></td>
+        current:
+        <td th:text="${listStatus.current}"></td>
+        size:
+        <td th:text="${listStatus.size}"></td>
+        first:
+        <td th:text="${listStatus.first}"></td>
+        last:
+        <td th:text="${listStatus.last}"></td>
+        index:
+        <td th:text="${listStatus.index}"></td>
+    </tr>
+    <tr>
+        <td th:text="${name}"></td>
+    </tr>
+</table>
+</body>
+</html>

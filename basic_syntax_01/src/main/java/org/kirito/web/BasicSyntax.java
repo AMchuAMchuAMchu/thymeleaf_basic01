@@ -30,6 +30,17 @@ import java.util.*;
 public class BasicSyntax {
 
 
+
+    @GetMapping("/eachState")
+    public String eachState(Model model){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("kayano");
+        list.add("hayami");
+        list.add("haruka");
+        model.addAttribute("list",list);
+        return "eachState";
+    }
+
     @GetMapping("/eachSelect")
     public String eachSelect(Model model){
         ArrayList<String> cityList = new ArrayList<>();

@@ -31,6 +31,14 @@ import java.util.MissingResourceException;
 public class BasicSyntax {
 
 
+
+    @GetMapping("/utext")
+    public String utext(Model model){
+        model.addAttribute("text01","嚯嚯,我来我<h1>king does 捏</h1>");
+        model.addAttribute("text02","嚯嚯,我来我<h1>king does 捏</h1>");
+        return "utext";
+    }
+
     @GetMapping("/booleanH")
     public String booleanH(Model model){
         model.addAttribute("c1",true);

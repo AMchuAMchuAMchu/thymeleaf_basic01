@@ -32,6 +32,15 @@ public class BasicSyntax {
 
 
 
+    @GetMapping("/each")
+    public String each(Model model){
+        String [] names = new String[]{"末日三问","四月是你的谎言","可塑性记忆","我们仍未知道那天所看见的花的名字"};
+        model.addAttribute("names",names);
+        Integer [] times = new Integer[]{2017,2011,2014,2015};
+        model.addAttribute("times",times);
+        return "each";
+    }
+
     @GetMapping("/utext")
     public String utext(Model model){
         model.addAttribute("text01","嚯嚯,我来我<h1>king does 捏</h1>");

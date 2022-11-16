@@ -11,17 +11,11 @@
     </tr>
 
     <tr th:each="name,listStatus:${list}">
-        count:
         <td th:text="${listStatus.count}"></td>
-        current:
         <td th:text="${listStatus.current}"></td>
-        size:
         <td th:text="${listStatus.size}"></td>
-        first:
         <td th:text="${listStatus.first}"></td>
-        last:
         <td th:text="${listStatus.last}"></td>
-        index:
         <td th:text="${listStatus.index}"></td>
         <td th:text="${name}"></td>
     </tr>

@@ -36,7 +36,7 @@ public class BasicSyntax {
     public String each(Model model){
         String [] names = new String[]{"末日三问","四月是你的谎言","可塑性记忆","我们仍未知道那天所看见的花的名字"};
         model.addAttribute("names",names);
-        Integer [] times = new Integer[]{2017,2011,2014,2015};
+        Integer [] times = new Integer[]{2017,2014,2015,2011};
         model.addAttribute("times",times);
         return "each";
     }

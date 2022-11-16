@@ -5,11 +5,12 @@
     <title>🥙🥙🥙</title>
 </head>
 <body>
-<table th:each="name,listStatus:${list}">
+<table>
     <tr>
         <th>爱酱名字O(∩_∩)O~</th>
     </tr>
-    <tr>
+
+    <tr th:each="name,listStatus:${list}">
         count:
         <td th:text="${listStatus.count}"></td>
         current:
@@ -22,8 +23,6 @@
         <td th:text="${listStatus.last}"></td>
         index:
         <td th:text="${listStatus.index}"></td>
-    </tr>
-    <tr>
         <td th:text="${name}"></td>
     </tr>
 </table>

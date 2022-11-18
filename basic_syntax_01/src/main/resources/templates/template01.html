@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>🍍🍍🍍</title>
 </head>
-<body>
+<body style="background-image: url('./yq.jpg')">
 <div th:fragment="Infokayano" style="float: left">
     <h1>🥳🥳<p th:text="${kayanoInfo}"></p>🍹🍹</h1>
 </div>
 <div th:fragment="Boolkayano" style="flex: auto">
-    <img th:if="${kayanoBool01}" src="../static/yq.jpg" alt="kayano" />
+    <h1 th:if="${kayanoBool01}">看kayano心情展不展示了O(∩_∩)O哈哈~</h1>
 </div>
 </body>
 </html>

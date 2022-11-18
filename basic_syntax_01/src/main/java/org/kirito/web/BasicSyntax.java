@@ -2,20 +2,15 @@ package org.kirito.web;
 
 import org.kirito.entity.Anime;
 import org.kirito.entity.Manga;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import java.beans.MethodDescriptor;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Description ==> TODO
@@ -30,6 +25,17 @@ import java.util.*;
 public class BasicSyntax {
 
 
+    @GetMapping("/eachList")
+    public String eachList(Model model){
+        ArrayList<String> animeList = new ArrayList<>();
+        animeList.add("那朵花");
+        animeList.add("罪恶王冠");
+        animeList.add("樱花庄的宠物女孩");
+        animeList.add("刀剑神域Alicization");
+        animeList.add("只要你说你爱我");
+        model.addAttribute("animeList",animeList);
+        return "eachList";
+    }
 
     @GetMapping("/eachState")
     public String eachState(Model model){

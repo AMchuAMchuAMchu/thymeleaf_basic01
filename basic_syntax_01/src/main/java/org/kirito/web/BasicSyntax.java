@@ -25,6 +25,14 @@ import java.util.HashMap;
 public class BasicSyntax {
 
 
+
+    @GetMapping("/template01")
+    public String template01(Model model){
+        model.addAttribute("kayanoInfo","罪恶王冠");
+        model.addAttribute("kayanoBool01",true);
+        return "template01";
+    }
+
     @GetMapping("/eachList")
     public String eachList(Model model){
         ArrayList<String> animeList = new ArrayList<>();

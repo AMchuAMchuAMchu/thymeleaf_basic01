@@ -30,8 +30,6 @@ public class BasicSyntax {
     public String template01(Model model){
         model.addAttribute("kayanoInfo","罪恶王冠");
         model.addAttribute("kayanoBool01",true);
-        model.addAttribute("character01",5200);
-        model.addAttribute("character02",21314);
         return "template02";
     }
 
